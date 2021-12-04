@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import "_variables";
+
+html,
+body {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark {
+  @include darken();
+}
+body.light {
+  @include lighten();
+}
+
+button {
+  font-family: "Space Mono", monospace;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+}

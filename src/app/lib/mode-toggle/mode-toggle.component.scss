@@ -1,0 +1,21 @@
+.toggle-btn-container {
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  span {
+    padding: 2px 4px;
+  }
+}
+
+.light {
+  border: 2px solid black;
+  background: white;
+}
+.dark {
+  background: black;
+  border: 2px solid black;
+  color: white;
+}
