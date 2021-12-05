@@ -35,7 +35,6 @@ export class ModeToggleService {
     @Inject(MODE_STORAGE_SERVICE) private modeStorage: ModeStorage
   ) {
     this.modeChanged$ = this.modeChangedSubject.asObservable();
-    this.updateCurrentMode(modeStorage.get());
     this.init();
   }
 
@@ -53,6 +52,12 @@ export class ModeToggleService {
    * Init function that update the application based on the initial mode value
    */
   private init() {
+    const deviceMode = window.matchMedia("(prefers-color-scheme: dark)");
+    let initMode = this.modeStorage.get();
+    if (!initMode) {
+      deviceMode.matches ? (initMode = Mode.DARK) : (initMode = Mode.LIGHT);
+    }
+    this.updateCurrentMode(initMode);
     this.document.body.classList.add(this.currentMode);
   }
 
@@ -61,13 +66,11 @@ export class ModeToggleService {
    * Exposed publicly
    */
   toggleMode() {
-    if (this.document.body.classList.contains(Mode.LIGHT)) {
-      this.document.body.classList.remove(Mode.LIGHT);
-      this.document.body.classList.add(Mode.DARK);
+    this.document.body.classList.toggle(Mode.LIGHT);
+    this.document.body.classList.toggle(Mode.DARK);
+    if (this.currentMode === Mode.LIGHT) {
       this.updateCurrentMode(Mode.DARK);
     } else {
-      this.document.body.classList.remove(Mode.DARK);
-      this.document.body.classList.add(Mode.LIGHT);
       this.updateCurrentMode(Mode.LIGHT);
     }
   }

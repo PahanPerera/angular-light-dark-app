@@ -40,6 +40,6 @@ export class ModeLocalStorageService implements ModeStorage {
     localStorage.setItem(this.LOCAL_STORAGE_KEY, mode.toString());
   }
   get(): Mode {
-    return <Mode>localStorage.getItem(this.LOCAL_STORAGE_KEY) || Mode.LIGHT;
+    return <Mode>localStorage.getItem(this.LOCAL_STORAGE_KEY) || undefined;
   }
 }

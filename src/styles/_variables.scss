@@ -7,12 +7,14 @@ $textColor_dark: white;
 $borderColor_light: black;
 $borderColor_dark: white;
 
+// mixin that enables css variables in light mode
 @mixin lighten() {
   --bgColor: #{$bgColor_light};
   --textColor: #{$textColor_light};
   --borderColor: #{$borderColor_light};
 }
 
+// mixin that enables css variables in dark mode
 @mixin darken() {
   --bgColor: #{$bgColor_dark};
   --textColor: #{$textColor_dark};
