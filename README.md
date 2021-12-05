@@ -1,6 +1,6 @@
 <img src="docs/header.svg" width="100%">
 
-# 🌞🌚Implement Angular Light / Dark Mode
+# 🌞🌚 Implement Angular Light / Dark Mode
 
 This project showcases Light / Dark mode implementation of a Angular Project.
 
