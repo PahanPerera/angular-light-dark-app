@@ -11,7 +11,9 @@ This project showcases Light / Dark mode implementation of a Angular Project.
 - Persistence via Local Storage (ability to write other persistance methods - e.g Session Storage)
 - Mode change listener based on Rxjs Observable
 - SCSS support with CSS variables
+- Load initial mode based on Device Theme Preference
 - Require no additional libraries
+- Well documented code
 
 # 💻 Local Setup
 
