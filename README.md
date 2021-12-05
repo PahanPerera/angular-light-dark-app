@@ -1,10 +1,10 @@
-![header](docs/header.svg "Header")
+<img src="docs/header.svg" width="100%">
 
-## Angular Light / Dark Mode
+# 🌞🌚Implement Angular Light / Dark Mode
 
 This project showcases Light / Dark mode implementation of a Angular Project.
 
-## Features
+# 📦 Features
 
 - Mode Toggle Button
 - Angular service that can be used to implement your own toggle component
@@ -13,11 +13,11 @@ This project showcases Light / Dark mode implementation of a Angular Project.
 - SCSS support with CSS variables
 - Require no additional libraries
 
-## Local Setup
+# 💻 Local Setup
 
 - Clone the project
 - Install dependencies `npm install`
 - Run `npm run start`
 - Visit `http://localhost:4200/`
 
-### Feedbacks are welcome!
+## 👏 Feedbacks are welcome!
