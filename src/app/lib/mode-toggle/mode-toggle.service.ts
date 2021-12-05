@@ -50,6 +50,11 @@ export class ModeToggleService {
 
   /**
    * Init function that update the application based on the initial mode value
+   * Flow as below
+   * 1 - If there is a saved mode in the browser - use this as the initial value
+   * 2 - If there is no saved mode, Check for the preferred device theme
+   * 3 - If device theme is dark, set the init value to `dark` 
+   * 4 - Else set the default value to `light`
    */
   private init() {
     const deviceMode = window.matchMedia("(prefers-color-scheme: dark)");
